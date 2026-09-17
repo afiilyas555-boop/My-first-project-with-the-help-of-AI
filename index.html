@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow - To-Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="header">
+            <div>
+                <h1>TaskFlow</h1>
+                <p>Organize your day, one task at a time.</p>
+            </div>
+
+            <div class="task-counter">
+                <span id="taskCount">0</span>
+                <small>Tasks</small>
+            </div>
+        </header>
+
+        <section class="task-form">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="What do you need to do?"
+                autocomplete="off"
+            >
+
+            <button id="addTaskBtn">
+                + Add Task
+            </button>
+
+        </section>
+
+        <section class="filters">
+
+            <button class="filter active" data-filter="all">
+                All
+            </button>
+
+            <button class="filter" data-filter="active">
+                Active
+            </button>
+
+            <button class="filter" data-filter="completed">
+                Completed
+            </button>
+
+        </section>
+
+        <section class="task-section">
+
+            <ul id="taskList"></ul>
+
+            <div id="emptyMessage" class="empty-message">
+                <div class="empty-icon">📋</div>
+                <h2>No tasks yet</h2>
+                <p>Add your first task to get started.</p>
+            </div>
+
+        </section>
+
+        <footer class="footer">
+
+            <span id="remainingTasks">
+                0 tasks remaining
+            </span>
+
+            <button id="clearCompleted">
+                Clear completed
+            </button>
+
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
